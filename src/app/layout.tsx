@@ -50,10 +50,10 @@ export default function Layout({ children }: { children: ReactNode }) {
           <link
             rel="icon"
             type="image/png"
-            href="/favicon-96x96.png"
+            href="/favicon/favicon-96x96.png"
             sizes="96x96"
           />
-          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+          <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
