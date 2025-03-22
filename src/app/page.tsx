@@ -104,7 +104,7 @@ export default async function Page() {
         </ul>
       </div>
 
-      <div className="flex justify-end text-base font-medium leading-6">
+      {/* <div className="flex justify-end text-base font-medium leading-6">
         <Link
           href="/pages/1"
           className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
@@ -112,7 +112,7 @@ export default async function Page() {
         >
           All Posts &rarr;
         </Link>
-      </div>
+      </div> */}
     </LayoutWrapper>
   );
 }
