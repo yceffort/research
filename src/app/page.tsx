@@ -22,6 +22,7 @@ export default async function Page() {
     const date = format(data.date || new Date(), "yyyy-MM-dd");
     const tags: string[] = data.tags || [];
     const description = data.description;
+    const title = data.title;
 
     return {
       filename,
@@ -29,6 +30,7 @@ export default async function Page() {
       date,
       tags,
       description,
+      title,
     };
   });
 
@@ -46,7 +48,7 @@ export default async function Page() {
 
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {slides.map((slide, index) => {
-            const { slug, date, tags, description } = slide;
+            const { slug, date, tags, description, title } = slide;
 
             return (
               <li key={index} className="py-12">
@@ -66,7 +68,7 @@ export default async function Page() {
                               href={`/slides/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
                             >
-                              {slug}
+                              {title}
                             </Link>
                           </h2>
                           <div className="flex flex-wrap">
