@@ -57,16 +57,8 @@ export const SiteConfig = {
   useKatex: false,
   menu: [
     {
-      label: "Posts",
-      path: "/pages/1",
-    },
-    {
-      label: "Tags",
-      path: "/tags",
-    },
-    {
-      label: "about",
-      path: "/about",
+      label: "📚 blog",
+      path: "https://yceffort.kr",
     },
   ],
   author: {
