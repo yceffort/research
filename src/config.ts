@@ -46,10 +46,10 @@ const getContactHref = (name: string, contact: string) => {
 };
 
 export const SiteConfig = {
-  url: "https://yceffort.kr",
+  url: "https://research.yceffort.kr",
   pathPrefix: "/",
-  title: "yceffort",
-  subtitle: "yceffort",
+  title: "yceffort 🧪",
+  subtitle: "research",
   copyright: "yceffort © All rights reserved.",
   disqusShortname: "",
   postsPerPage: 5,

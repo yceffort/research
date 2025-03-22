@@ -17,7 +17,7 @@ const LayoutWrapper = ({ children }: { children: ReactNode }) => {
       <div className="flex h-screen flex-col justify-between">
         <header className="flex items-center justify-between py-10">
           <div>
-            <Link href="/" aria-label="yceffort's blog">
+            <Link href="/" aria-label="yceffort's research">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
                   <Image
