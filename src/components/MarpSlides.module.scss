@@ -1,0 +1,17 @@
+.marpSlides {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  &.multiple {
+    cursor: pointer;
+  }
+}
+
+.marpSlide {
+  cursor: inherit;
+}
