@@ -1,4 +1,5 @@
 ---
+title: 예제 슬라이드
 marp: true
 paginate: true
 theme: lead
