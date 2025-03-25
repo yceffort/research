@@ -114,11 +114,7 @@ export function MarpSlides({ dataHtml, dataCss, dataFonts }: MarpSlidesProps) {
               onClick={handleSlideClick}
               style={{ cursor: multiple ? "pointer" : "default" }}
             >
-              <Marp
-                border={false}
-                rendered={{ html, css, fonts }}
-                page={i + 1}
-              />
+              <Marp border rendered={{ html, css, fonts }} page={i + 1} />
             </div>
           </SwiperSlide>
         ))}
