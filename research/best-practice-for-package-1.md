@@ -7,6 +7,7 @@ tags:
   - javascript
 date: 2025-03-22
 description: "package.json 만 잘만들어도 반은 먹고 간다."
+published: true
 ---
 
 # 패키지 가이드 1탄) 패키지 제작을 위한 package.json 가이드

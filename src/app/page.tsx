@@ -3,6 +3,7 @@ import path from "path";
 
 import Link from "next/link";
 
+import { compareDesc } from "date-fns/compareDesc";
 import { format } from "date-fns/format";
 import matter from "gray-matter";
 
@@ -14,25 +15,33 @@ export default async function Page() {
   const allFiles = fs.readdirSync(researchPath);
   const mdFiles = allFiles.filter((file) => file.endsWith(".md"));
 
-  const slides = mdFiles.map((filename) => {
-    const slug = filename.replace(/\.md$/, "");
+  const slides = mdFiles
+    .map((filename) => {
+      const slug = filename.replace(/\.md$/, "");
 
-    const content = fs.readFileSync(path.join(researchPath, filename), "utf-8");
-    const { data } = matter(content);
-    const date = format(data.date || new Date(), "yyyy-MM-dd");
-    const tags: string[] = data.tags || [];
-    const description = data.description;
-    const title = data.title;
+      const content = fs.readFileSync(
+        path.join(researchPath, filename),
+        "utf-8"
+      );
+      const { data } = matter(content);
+      const date = format(data.date || new Date(), "yyyy-MM-dd");
+      const tags: string[] = data.tags || [];
+      const description = data.description;
+      const title = data.title;
+      const published = data.published;
 
-    return {
-      filename,
-      slug,
-      date,
-      tags,
-      description,
-      title,
-    };
-  });
+      return {
+        filename,
+        slug,
+        date,
+        tags,
+        description,
+        title,
+        published,
+      };
+    })
+    .filter((slide) => slide.published)
+    .sort((a, b) => compareDesc(a.date, b.date));
 
   return (
     <LayoutWrapper>
