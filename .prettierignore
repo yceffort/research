@@ -1,0 +1,6 @@
+/public/*
+/node_modules/*
+/.cache/*
+/.next/*
+/.lighthouseci/*
+pnpm-lock.yaml
