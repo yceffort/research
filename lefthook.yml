@@ -7,9 +7,6 @@ pre-commit:
     prettier:
       glob: "*.{ts,cts,tsx,js,cjs,jsx,json,md,yaml,yml}"
       run: pnpm exec prettier --write {staged_files}
-    stylelint:
-      glob: "*.{scss,css}"
-      run: pnpm exec stylelint --fix {staged_files}
 commit-msg:
   commands:
     commit-helper:
