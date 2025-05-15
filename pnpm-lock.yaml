@@ -18,8 +18,8 @@ importers:
         specifier: ^2.2.4
         version: 2.2.4(@types/estree@1.0.6)(@typescript-eslint/eslint-plugin@8.27.0(@typescript-eslint/parser@8.27.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(@typescript-eslint/parser@8.27.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0)(typescript@5.8.2)
       '@naverpay/eslint-plugin':
-        specifier: ^2.1.1
-        version: 2.1.1(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)
+        specifier: ^2.2.0
+        version: 2.2.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)
       '@tailwindcss/forms':
         specifier: ^0.5.10
         version: 0.5.10(tailwindcss@4.0.17)
@@ -328,6 +328,11 @@ packages:
 
   '@naverpay/eslint-plugin@2.1.1':
     resolution: {integrity: sha512-/B2xV4O9muDqaq4z+CHlEvLyu/DkgQo+mctmn0w9Tb4nAcY4I9WLnwxrGnfe53CYUtLAdwqZmsIMhYM+qdSKVw==}
+    peerDependencies:
+      eslint: '>=8.57.0'
+
+  '@naverpay/eslint-plugin@2.2.0':
+    resolution: {integrity: sha512-o4sbNFEmdtBg7NjI3OSJEAZYgTc+bRGtntNz2lENdhJmBPve/aByhZvNFi13edIJ0f1+8oLHHu+0gJb05jKysA==}
     peerDependencies:
       eslint: '>=8.57.0'
 
@@ -2807,6 +2812,17 @@ snapshots:
       - typescript
 
   '@naverpay/eslint-plugin@2.1.1(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)':
+    dependencies:
+      '@naverpay/ast-parser': 0.0.2(typescript@5.8.2)
+      eslint: 9.23.0(jiti@2.4.2)
+      micromatch: 4.0.8
+      minimatch: 9.0.5
+      svgo: 3.3.2
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  '@naverpay/eslint-plugin@2.2.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)':
     dependencies:
       '@naverpay/ast-parser': 0.0.2(typescript@5.8.2)
       eslint: 9.23.0(jiti@2.4.2)
