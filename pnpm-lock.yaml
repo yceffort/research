@@ -11,9 +11,9 @@ importers:
       '@marp-team/marp-core':
         specifier: ^4.0.1
         version: 4.0.1
-      '@naverpay/commit-helper':
-        specifier: ^1.2.0
-        version: 1.2.0(husky@8.0.3)(typescript@5.8.2)
+      '@naverpay/commithelper-go':
+        specifier: ^1.0.1
+        version: 1.0.1
       '@naverpay/eslint-config':
         specifier: ^2.2.4
         version: 2.2.4(@types/estree@1.0.6)(@typescript-eslint/eslint-plugin@8.27.0(@typescript-eslint/parser@8.27.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(@typescript-eslint/parser@8.27.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0)(typescript@5.8.2)
@@ -353,12 +353,9 @@ packages:
   '@naverpay/ast-parser@0.0.2':
     resolution: {integrity: sha512-o9T9GmtF2r/z4jQVgUsaNrupKsxvpZ+zsa21UB37l7fnZSv3Nef8CiNFp2p4u5Vojp+X/uV/XT0sBw2kwd4y3w==}
 
-  '@naverpay/commit-helper@1.2.0':
-    resolution: {integrity: sha512-XV9YSdAvSPjEq1ei+7T1gPpUNfC91LQqHrCgd7KeVR51tBLYi6VpAYSPhOvcLtcxXeGBl16GvEIK+vLutvRzGQ==}
-    engines: {node: '>=18.0.0'}
+  '@naverpay/commithelper-go@1.0.1':
+    resolution: {integrity: sha512-+p0Ywj7ms7s6UPBkqCfAr1e/Y1SrBQPCY4IQZ8iZok0jHTKQ1qeeutk3g/fpISjO+cZov6gUDM0PGsIpssGcTw==}
     hasBin: true
-    peerDependencies:
-      husky: ^8.0.3
 
   '@naverpay/eslint-config@2.2.4':
     resolution: {integrity: sha512-bW7n82sYfD1YzATW/DBaZ3RlyuQmInJyWPWQDyWmU0lyQLRmVuHP3dUtAr2WH0p3Opjxo1ADhWZznmhEULzcBg==}
@@ -1050,15 +1047,6 @@ packages:
 
   cose-base@2.2.0:
     resolution: {integrity: sha512-AzlgcsCbUMymkADOJtQm3wO9S3ltPfYOFD5033keQn9NJzIbtnZj+UdBJe7DYml/8TdbtHJW3j58SOnKhWY/5g==}
-
-  cosmiconfig@8.3.6:
-    resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      typescript: '>=4.9.5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -1799,11 +1787,6 @@ packages:
   http-https@1.0.0:
     resolution: {integrity: sha512-o0PWwVCSp3O0wS6FvNr6xfBCHgt0m1tvPLFOCc2iFDKTRAXhB7m8klDf7ErowFH8POa6dVdGatKU5I1YYwzUyg==}
 
-  husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
-    hasBin: true
-
   iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
@@ -2249,10 +2232,6 @@ packages:
 
   mdurl@2.0.0:
     resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
-
-  meow@12.1.1:
-    resolution: {integrity: sha512-BhXM0Au22RwUneMPwSCnyhTOizdWoIEPU9sp0Aqa1PnDMR5Wv2FGXYDjuzJEIX+Eo2Rb8xuYe5jrnm5QowQFkw==}
-    engines: {node: '>=16.10'}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -3291,13 +3270,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@naverpay/commit-helper@1.2.0(husky@8.0.3)(typescript@5.8.2)':
-    dependencies:
-      cosmiconfig: 8.3.6(typescript@5.8.2)
-      husky: 8.0.3
-      meow: 12.1.1
-    transitivePeerDependencies:
-      - typescript
+  '@naverpay/commithelper-go@1.0.1': {}
 
   '@naverpay/eslint-config@2.2.4(@types/estree@1.0.6)(@typescript-eslint/eslint-plugin@8.27.0(@typescript-eslint/parser@8.27.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(@typescript-eslint/parser@8.27.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.23.0(jiti@2.4.2))(jsonc-eslint-parser@2.4.0)(typescript@5.8.2)':
     dependencies:
@@ -4023,15 +3996,6 @@ snapshots:
   cose-base@2.2.0:
     dependencies:
       layout-base: 2.0.1
-
-  cosmiconfig@8.3.6(typescript@5.8.2):
-    dependencies:
-      import-fresh: 3.3.1
-      js-yaml: 4.1.0
-      parse-json: 5.2.0
-      path-type: 4.0.0
-    optionalDependencies:
-      typescript: 5.8.2
 
   cross-spawn@7.0.6:
     dependencies:
@@ -4953,8 +4917,6 @@ snapshots:
 
   http-https@1.0.0: {}
 
-  husky@8.0.3: {}
-
   iconv-lite@0.6.3:
     dependencies:
       safer-buffer: 2.1.2
@@ -5356,8 +5318,6 @@ snapshots:
   mdn-data@2.0.30: {}
 
   mdurl@2.0.0: {}
-
-  meow@12.1.1: {}
 
   merge2@1.4.1: {}
 

@@ -10,4 +10,4 @@ pre-commit:
 commit-msg:
   commands:
     commit-helper:
-      run: "pnpm exec commit-helper {1}"
+      run: "pnpm exec commithelper-go {1}"

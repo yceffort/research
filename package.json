@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@marp-team/marp-core": "^4.0.1",
-    "@naverpay/commit-helper": "^1.2.0",
+    "@naverpay/commithelper-go": "^1.0.1",
     "@naverpay/eslint-config": "^2.2.4",
     "@naverpay/eslint-plugin": "^2.1.1",
     "@tailwindcss/forms": "^0.5.10",
