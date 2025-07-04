@@ -1,4 +1,6 @@
 import { Marp as MarpCore } from "@marp-team/marp-core";
+// @ts-expect-error - markdown-it-mermaid doesn't have types
+import mermaidPlugin from "markdown-it-mermaid";
 import postcss from "postcss";
 import postcssImportUrl from "postcss-import-url";
 
@@ -29,6 +31,9 @@ export async function generateRenderedMarp(markdown: string) {
     script: false,
     printable: false,
   });
+
+  // Mermaid 플러그인 추가
+  marp.use(mermaidPlugin);
 
   const { html, css } = marp.render(markdown, { htmlAsArray: true });
 

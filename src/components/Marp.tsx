@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 
 import classNames from "classnames";
+import mermaid from "mermaid";
 
 import { useFontFace } from "@/hooks/useFontFace";
 
@@ -57,9 +58,43 @@ export function Marp({
       </style>
     `;
 
+    // Mermaid 초기화 및 렌더링
+    const initMermaid = async () => {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: "default",
+        securityLevel: "loose",
+      });
+
+      // Shadow DOM 내부의 mermaid 다이어그램 찾기
+      const mermaidElements = shadowRoot.querySelectorAll(".mermaid");
+
+      for (let i = 0; i < mermaidElements.length; i++) {
+        const element = mermaidElements[i] as HTMLElement;
+        const graphDefinition = element.textContent || "";
+
+        if (graphDefinition.trim()) {
+          try {
+            const { svg } = await mermaid.render(
+              `mermaid-${page}-${i}`,
+              graphDefinition,
+            );
+            element.innerHTML = svg;
+          } catch (error) {
+            element.innerHTML = `<div style="color: red;">Mermaid Error: ${String(error)}</div>`;
+          }
+        }
+      }
+    };
+
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const { browser } = require("@marp-team/marp-core/browser");
-    return browser(shadowRoot);
+    const cleanup = browser(shadowRoot);
+
+    // Mermaid 초기화는 DOM이 준비된 후 실행
+    setTimeout(initMermaid, 0);
+
+    return cleanup;
   }, [html, css, page]);
 
   return (
