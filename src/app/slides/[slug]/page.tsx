@@ -62,7 +62,7 @@ export default async function SlidePage(props: {
   const { html, css, fonts } = data;
 
   return (
-    <div className="p-4">
+    <div>
       <MarpSlides
         dataHtml={JSON.stringify(html)}
         dataCss={css}
