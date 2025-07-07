@@ -6,7 +6,6 @@ theme: default
 tags:
   - AI
   - LLM
-  - RAG
 date: 2025-07-03
 description: "진짜로 알고 싶다"
 published: true
@@ -14,7 +13,7 @@ published: true
 
 # LLM과 RAG 그것이 알고 싶다
 
-> 지극히 비전공자 입장에서 쓰여진, 이해를 돕기 위해 간결하게 작성된 글입니다 📝
+> 지극히 AI 비전공자 입장에서 쓰여진, 이해를 돕기 위해 간결하게 작성된 글입니다 📝
 
 <!-- _class: invert -->
 
@@ -307,6 +306,6 @@ console.log(completion.choices[0].message.content);
 
 - LLM은 학습 데이터의 시점까지만 알고 있음
 - 회사 내부 정보, 최신 뉴스, 개인 데이터는 모름
-- **RAG(Retrieval-Augmented Generation)**로 이를 해결!
+- **RAG(Retrieval-Augmented Generation)** 로 이를 해결!
 
 **다음 시간에 계속..** 🚀

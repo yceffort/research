@@ -146,7 +146,7 @@ export function MarpSlides({ dataHtml, dataCss, dataFonts }: MarpSlidesProps) {
       }
       // 중앙 영역은 아무 동작 없음
     },
-    [multiple]
+    [multiple],
   );
 
   // 해시 변경 감지
@@ -183,7 +183,7 @@ export function MarpSlides({ dataHtml, dataCss, dataFonts }: MarpSlidesProps) {
   // Marp 렌더링 데이터 (memoized)
   const marpRenderData = useMemo(
     () => ({ html, css, fonts }),
-    [html, css, fonts]
+    [html, css, fonts],
   );
 
   // 에러 상태 처리

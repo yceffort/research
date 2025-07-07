@@ -5,7 +5,6 @@ paginate: true
 theme: default
 tags:
   - AI
-  - LLM
   - RAG
 date: 2025-07-03
 description: "진짜로 알고 싶다"
