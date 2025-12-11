@@ -14,7 +14,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@marp-team/marp-core": "^4.0.1",
+    "@marp-team/marp-core": "^4.2.0",
     "@naverpay/commithelper-go": "^1.0.1",
     "@naverpay/eslint-config": "^2.2.4",
     "@naverpay/eslint-plugin": "^2.1.1",
@@ -27,12 +27,12 @@
     "@vercel/analytics": "^1.5.0",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
-    "eslint": "^9.23.0",
+    "eslint": "^9.39.1",
     "gray-matter": "^4.0.3",
     "lefthook": "^1.11.5",
     "markdown-it-mermaid": "^0.2.5",
-    "mermaid": "^11.7.0",
-    "next": "^15.2.4",
+    "mermaid": "^11.10.0",
+    "next": "^15.2.6",
     "next-themes": "^0.4.6",
     "postcss": "^8.5.3",
     "postcss-import-url": "^7.2.0",
@@ -52,6 +52,14 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "lefthook"
-    ]
+    ],
+    "overrides": {
+      "markdown-it-mermaid>mermaid": "^11.10.0",
+      "js-yaml": "^4.1.1",
+      "brace-expansion@>=1.0.0 <1.1.12": "^1.1.12",
+      "brace-expansion@>=2.0.0 <2.0.2": "^2.0.2",
+      "@eslint/plugin-kit": "^0.3.4",
+      "lodash.trim": "npm:lodash@^4.17.21"
+    }
   }
 }
