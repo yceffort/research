@@ -55,7 +55,7 @@
     ],
     "overrides": {
       "markdown-it-mermaid>mermaid": "^11.10.0",
-      "js-yaml": "^4.1.1",
+      "@marp-team/marpit>js-yaml": "^4.1.1",
       "brace-expansion@>=1.0.0 <1.1.12": "^1.1.12",
       "brace-expansion@>=2.0.0 <2.0.2": "^2.0.2",
       "@eslint/plugin-kit": "^0.3.4",
